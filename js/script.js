@@ -11,6 +11,8 @@ let progress = 0;
 let coffee_mug = document.getElementById("coffee_mug");
 
 function getCoffee(coffeName, price) {
+   let audio = new Audio("audio/btn.mp3");
+   audio.play();
    if (+money.value >= price) {
       money.value = +money.value - price;
       displayBalance.innerText = money.value;
@@ -74,7 +76,7 @@ for (let i = 0; i < banknotes.length; i++) { // Перебираем колле�
 }
 
 /* Основной код для расчета сдачи */
-function getChange(num) {
+function getChange(num) { //39 - 10, 10
    let change_box_h = change_box.getBoundingClientRect().height - 60;
    let change_box_w = change_box.getBoundingClientRect().width - 60;
    let change = 0;
@@ -85,17 +87,18 @@ function getChange(num) {
    else if (num >= 2) change = 2;
    else if (num >= 1) change = 1;
    else {
-      money.value = "";
-      displayInfo.innerText = "Забрите сдачу";
-      displayBalance.innerText = 0;
       let audio = new Audio("audio/coins.mp3");
       audio.play();
-      return;
    }
 
    if (change > 0) {
-      change_box.innerHTML += `<img onclick='this.style.display="none";' src="img/${change}rub.png" style="top:${top}px;left:${left}px;">`;
-      console.log(change);
+      let img = document.createElement('img');
+      img.src = `img/${change}rub.png`;
+      img.style.top = top + 'px';
+      img.style.left = left + 'px';
+      img.onclick = function () { this.hidden = true; }
+      change_box.append(img);
+      displayBalance.innerText = money.value = 0;
       getChange(num - change);
    }
 }
