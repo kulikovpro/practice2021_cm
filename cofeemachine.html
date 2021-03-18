@@ -60,10 +60,12 @@
                   </div>
                   <button class="btn btn-lg btn-light my-3" onclick="getChange(money.value)"><i
                         class="fas fa-hand-holding-usd"></i> Выдать сдачу</button>
-                  <img id="coffee_mug" src="img/mugcof.png">
+                  <img id="coffee_mug" src="img/mugcof.png" alt="Стакан с кофе">
                </div>
                <div class="col-sm-6 text-center">
-                  <input hidden id="money" type="text" placeholder="&#8381; Введите сумму">
+                  <label for="money">
+                     <input hidden id="money" type="text" placeholder="&#8381; Введите сумму">
+                  </label>
                   <img id="bill_acc" src="img/bill_acc.png" alt="Купюроприемник">
                   <div id="change_box" class="mx-auto mt-3"></div>
                </div>
