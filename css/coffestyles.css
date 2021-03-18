@@ -1,5 +1,5 @@
 body {
-   background: url(../img/cm_repair5.jpg);
+   background: url(../img/bg.jpg);
 
    font-family: "Montserrat", sans-serif;
    font-weight: 600;
@@ -61,7 +61,7 @@ body {
    width: 100%;
    height: 150px;
 
-   background: url(../img/1pX9.gif);
+   background: url(../img/display.gif);
 
    color: white;
 
@@ -86,7 +86,7 @@ img {
 #change_box {
    position: relative;
 
-   background-image: url(../img/kovrik.jpg);
+   background-image: url(../img/pad.jpg);
 
    width: 95%;
    height: 200px;
