@@ -1,0 +1,128 @@
+body {
+   background: url(../img/cm_repair5.jpg);
+
+   font-family: "Montserrat", sans-serif;
+   font-weight: 600;
+}
+
+/* Основной контейнер =================================== */
+.container.rounded-3 {
+   /* position: relative; */
+
+   background: rgba(192, 192, 192, 0.5);
+   color: white;
+}
+
+/* Кнопки выбора кофе =================================== */
+.coffee-btn-group {
+   height: 60px;
+
+   background: silver;
+
+   font-size: 1.5em;
+   font-weight: 600;
+   color: #c08c43;
+   line-height: 2.3em;
+
+   border: 1px solid Wheat;
+   border-radius: 30px 0 0 30px;
+}
+
+.coffee-btn-group > span {
+   vertical-align: top;
+}
+
+.coffee-btn {
+   display: inline-block;
+
+   width: 60px !important;
+   height: 60px;
+
+   background: #25100f;
+
+   border: 3px solid #c08c43;
+   box-shadow: 1px 1px 5px black;
+
+   cursor: pointer;
+}
+
+.coffee-btn:hover {
+   background: #f0b73e;
+}
+
+.coffee-btn:active {
+   background: rgb(250, 66, 10);
+
+   box-shadow: inset 0 0 10px rgb(0, 0, 0);
+}
+
+/* Стилизация для нашего "дисплея" =================================== */
+#display {
+   width: 100%;
+   height: 150px;
+
+   background: url(../img/1pX9.gif);
+
+   color: white;
+
+   border: 5px groove #3d1f1d;
+}
+
+/* Стилизация для изображений общая =================================== */
+img {
+   margin-bottom: 1rem;
+}
+
+/* Стилизация для купюр =================================== */
+[src$="rub.jpg"] {
+   cursor: pointer;
+   z-index: 1;
+}
+[src$="rub.jpg"]:active {
+   filter: contrast(1.5);
+}
+
+/* Стилизация для поля сдачи =================================== */
+#change_box {
+   position: relative;
+
+   background-image: url(../img/kovrik.jpg);
+
+   width: 95%;
+   height: 200px;
+
+   border: 1px solid #c08c43;
+   border-radius: 5%;
+}
+
+[src$="rub.png"] {
+   position: absolute;
+   left: 0;
+   top: 0;
+
+   width: 60px;
+
+   cursor: pointer;
+}
+
+#lock {
+   position: absolute;
+   top: 0;
+
+   width: 100%;
+   height: 100vh;
+}
+
+#coffee_mug {
+   width: 50%;
+
+   opacity: 0;
+   transition: all 2s;
+
+   cursor: pointer;
+}
+
+#coffee_mug:hover {
+   filter: contrast(100%);
+   transition: all 0s;
+}
